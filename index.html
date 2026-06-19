@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Summer Stops 2026</title>
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Summer 2026">
+<meta name="theme-color" content="#13284a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -92,7 +98,8 @@
   /* Banner (postcard header) */
   .banner{position:relative; height:90px; overflow:hidden;}
   .bsvg{position:absolute; inset:0; width:100%; height:100%; display:block;}
-  .scrim{position:absolute; inset:0; background:linear-gradient(to top, rgba(10,15,30,.5), rgba(10,15,30,0) 62%);}
+  .scrim{position:absolute; inset:0; background:linear-gradient(to top, rgba(8,12,24,.74) 0%, rgba(8,12,24,.22) 52%, rgba(8,12,24,.12) 100%);}
+  .bphoto{position:absolute; inset:0; background-size:cover; background-position:center 38%; background-repeat:no-repeat;}
   .btag{position:absolute; top:9px; left:11px; font-size:10.5px; font-weight:700; letter-spacing:.5px;
     text-transform:uppercase; color:#fff; background:rgba(0,0,0,.30); padding:3px 9px; border-radius:999px;}
   .bchev{position:absolute; top:8px; right:10px; width:24px; height:24px; border-radius:50%;
@@ -190,7 +197,7 @@
     <div class="sub" style="margin-top:6px">Aug 24 &mdash; fly New York (JFK) via Dubai, landing Riyadh early Aug 26.</div>
   </div>
 
-  <div class="foot">Summer Stops 2026 &middot; Sultan&rsquo;s itinerary<br>&ldquo;You are here&rdquo; and the countdown update automatically each time you open it</div>
+  <div class="foot">Summer Stops 2026 &middot; Sultan&rsquo;s itinerary<br>&ldquo;You are here&rdquo; and the countdown update automatically each time you open it<br>Photos via Unsplash &middot; free to use</div>
 </div>
 
 <script>
@@ -201,6 +208,20 @@ const PLANE = '<svg viewBox="0 0 24 24" width="11" height="11" fill="currentColo
 const CAR = '<svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M5 11l1.4-4.2A2 2 0 0 1 8.3 5h7.4a2 2 0 0 1 1.9 1.4L19 11h1a1 1 0 0 1 1 1v4h-2.1a1.9 1.9 0 0 1-3.8 0H8.9a1.9 1.9 0 0 1-3.8 0H3v-4a1 1 0 0 1 1-1z"/></svg>';
 const TRAIN = '<svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><rect x="5" y="3" width="14" height="13" rx="3"/><circle cx="9" cy="12" r="1.4" fill="#fff"/><circle cx="15" cy="12" r="1.4" fill="#fff"/><path d="M7.5 17l-2 3M16.5 17l2 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
 
+const PH = {
+  london:"https://images.unsplash.com/photo-1513635269975-59663e0ac1ad",
+  la:"https://images.unsplash.com/photo-1744696008558-f91934254fe4",
+  vegas:"https://images.unsplash.com/photo-1758205482205-b465a5c5df29",
+  bh:"https://images.unsplash.com/photo-1733756798962-e481f003e9d7",
+  sm:"https://images.unsplash.com/photo-1459258350879-34886319a3c9",
+  cam:"https://images.unsplash.com/photo-1565127803082-69dd82351360",
+  ny:"https://images.unsplash.com/photo-1613968317130-e6565f71b9d3"
+};
+const GR = {
+  london:["#3E5277","#C98F4F"], la:["#4FA3D1","#F6C26B"], vegas:["#241A44","#7A2E6E"],
+  ojai:["#6E5E92","#EBAAB1"], bh:["#5AA9D6","#F3D08A"], sm:["#3C97A8","#CFE8E2"],
+  sf:["#B5573D","#E8A33D"], cam:["#5E7FA3","#CBD8C5"], ny:["#2E3F63","#D98B3A"]
+};
 const B = {
 london:`<svg class="bsvg" viewBox="0 0 320 100" preserveAspectRatio="none"><defs><linearGradient id="g_london" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3E5277"/><stop offset="1" stop-color="#C98F4F"/></linearGradient></defs><rect width="320" height="100" fill="url(#g_london)"/><circle cx="262" cy="32" r="13" fill="#F4D9A0" opacity=".85"/><g fill="#1B2230"><rect x="70" y="60" width="30" height="40"/><rect x="105" y="52" width="24" height="48"/><rect x="135" y="64" width="34" height="36"/><rect x="200" y="58" width="26" height="42"/><rect x="230" y="66" width="30" height="34"/><rect x="285" y="60" width="35" height="40"/><rect x="40" y="34" width="16" height="66"/><polygon points="40,34 48,20 56,34"/></g><circle cx="48" cy="46" r="4" fill="#E8C887"/></svg>`,
 la:`<svg class="bsvg" viewBox="0 0 320 100" preserveAspectRatio="none"><defs><linearGradient id="g_la" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4FA3D1"/><stop offset="1" stop-color="#F6C26B"/></linearGradient></defs><rect width="320" height="100" fill="url(#g_la)"/><circle cx="58" cy="30" r="15" fill="#FCE59A"/><g stroke="#22502F" stroke-width="3" stroke-linecap="round" fill="none"><path d="M150 98 Q148 60 150 48"/><path d="M150 48 q-16 -6 -24 -12"/><path d="M150 48 q16 -6 24 -12"/><path d="M150 48 q-10 -12 -14 -20"/><path d="M150 48 q10 -12 14 -20"/><path d="M210 98 Q208 66 210 56"/><path d="M210 56 q-13 -5 -20 -10"/><path d="M210 56 q13 -5 20 -10"/><path d="M210 56 q-8 -10 -11 -16"/><path d="M210 56 q8 -10 11 -16"/><path d="M256 98 Q254 70 256 62"/><path d="M256 62 q-11 -4 -17 -9"/><path d="M256 62 q11 -4 17 -9"/></g></svg>`,
@@ -314,10 +335,13 @@ function stopHTML(s){
     ? `<span class="badge stay">Resident <span class="sm">\u00b7 in full</span></span>`
     : `<span class="badge move">Traveler <span class="sm">\u00b7 shorten &amp; combine${s.borderline?' (borderline)':''}</span></span>`;
   const hls = s.hl.map(h=>`<div class="hl">${h}</div>`).join('');
+  const _g = GR[s.key] || ['#2A3550','#4A4F6E'];
+  const grad = `linear-gradient(155deg, ${_g[0]}, ${_g[1]})`;
+  const bphoto = PH[s.key] ? `<div class="bphoto" style="background-image:url('${PH[s.key]}?w=1100&q=72&auto=format&fit=crop')"></div>` : '';
   return `<div class="stop" data-start="${s.start}" data-end="${s.end}" data-city="${s.cityShort}">
     <div class="rail"><div class="dot ${s.sub?'sub':''}">${s.n}</div></div>
     <div class="card ${s.sub?'sub':''}">
-      <div class="banner">${B[s.key]}<div class="scrim"></div>
+      <div class="banner" style="background:${grad}">${bphoto}<div class="scrim"></div>
         <span class="btag">${s.tag}</span>
         <span class="bchev">&#9662;</span>
         <span class="here-pill">You are here</span>
