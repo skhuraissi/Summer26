@@ -148,6 +148,23 @@
     *{transition:none !important; scroll-behavior:auto !important;}
     .card{opacity:1; transform:none;}
   }
+  /* travel-day prayers */
+  details.praycard{background:#fff; border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:14px; margin:2px 2px 18px; overflow:hidden;}
+  details.praycard summary{list-style:none; cursor:pointer; display:flex; align-items:center; gap:8px; padding:13px 15px;}
+  details.praycard summary::-webkit-details-marker{display:none;}
+  .psum-t{font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:15px; color:var(--ink);}
+  .psum-s{font-size:11.5px; color:var(--muted); font-weight:600;}
+  .pchev{margin-left:auto; color:var(--teal); font-size:13px; transition:transform .25s ease;}
+  details.praycard[open] .pchev{transform:rotate(180deg);}
+  .pbody{padding:0 15px 14px;}
+  .pnote{font-size:12.5px; color:var(--ink2); background:rgba(44,106,92,.07); border:1px solid rgba(44,106,92,.18); border-radius:10px; padding:9px 11px; margin-bottom:11px; line-height:1.5;}
+  .pnote b{color:var(--ink);}
+  .prow{display:flex; gap:10px; padding:8px 0; border-top:1px solid var(--line);}
+  .pd{flex:0 0 76px; font-size:11.5px; font-weight:800; color:var(--ink); padding-top:1px;}
+  .pd.pf{color:var(--amber-deep);}
+  .pc{flex:1; font-size:12.5px; color:var(--ink2); line-height:1.5;}
+  .pc b{color:var(--ink);}
+  .pfine{font-size:11px; color:var(--muted); margin-top:10px; line-height:1.45; font-style:italic;}
 </style>
 </head>
 <body>
@@ -182,13 +199,45 @@
 
   <div class="route" id="route"></div>
 
+  <details class="praycard">
+    <summary><span class="psum-t">Travel-day prayers</span><span class="psum-s">airport · in the air · on drives</span><span class="pchev">▾</span></summary>
+    <div class="pbody">
+      <div class="pnote">On the road or in the air you're a <b>traveler</b>: shorten 4-rak'ah prayers to 2 (Qasr) and combine Dhuhr+Asr &amp; Maghrib+Isha (Jam'). Fajr stays 2 rak'ah and is never combined. In a plane, pray at each prayer's time for the land below (ask crew for the qibla); sit if you can't stand.</div>
+
+      <div class="prow"><div class="pd">Sun Jul 19</div><div class="pc"><b>Riyadh → Dubai → London.</b> Fajr enters 03:49 — a minute before your 03:50 takeoff, so pray it <b>in the air</b> after boarding (2 rak'ah, before sunrise). Dhuhr+Asr: shorten &amp; combine in flight or on arrival. Maghrib+Isha in London, in full.</div></div>
+
+      <div class="prow"><div class="pd pf">Fri Jul 24</div><div class="pc"><b>London → LAX (Friday).</b> As a traveler, <b>Jumu'ah isn't required</b> — pray <b>Dhuhr</b> (shortened, combined with Asr) in the air or on landing. Maghrib+Isha in LA, in full.</div></div>
+
+      <div class="prow"><div class="pd pf">Fri Jul 31</div><div class="pc"><b>In Los Angeles.</b> You're resident — <b>attend Jumu'ah</b> at a mosque (e.g. King Fahad Mosque, Culver City).</div></div>
+
+      <div class="prow"><div class="pd">Sat Aug 1</div><div class="pc"><b>Drive LA → Las Vegas (~4h).</b> Traveler — combine &amp; shorten Dhuhr+Asr at a stop; Maghrib+Isha on arrival.</div></div>
+
+      <div class="prow"><div class="pd">Mon Aug 3</div><div class="pc"><b>Drive Vegas → Ojai (~5.5h).</b> Traveler — combine &amp; shorten en route.</div></div>
+
+      <div class="prow"><div class="pd pf">Fri Aug 7</div><div class="pc"><b>Drive Ojai → Beverly Hills (~1.5h, Friday).</b> Short drive — if you're settled in LA by midday, <b>attend Jumu'ah</b>; if still driving at Dhuhr, pray Dhuhr. Resident again from here.</div></div>
+
+      <div class="prow"><div class="pd">Thu Aug 13</div><div class="pc"><b>Fly LAX → Albuquerque (~1h45).</b> Traveler — shorten &amp; combine Dhuhr+Asr around the flight.</div></div>
+
+      <div class="prow"><div class="pd pf">Fri Aug 14</div><div class="pc"><b>In Albuquerque.</b> Traveler — Jumu'ah not required; you may attend (Islamic Center of New Mexico), otherwise pray Dhuhr.</div></div>
+
+      <div class="prow"><div class="pd">Wed Aug 19</div><div class="pc"><b>Santa Fe → ABQ → New York.</b> Traveler across the day — shorten &amp; combine; Maghrib+Isha in NYC, in full once settled.</div></div>
+
+      <div class="prow"><div class="pd pf">Fri Aug 21</div><div class="pc"><b>In New York.</b> Resident — <b>attend Jumu'ah</b> (many mosques nearby).</div></div>
+
+      <div class="prow"><div class="pd">Mon Aug 24</div><div class="pc"><b>New York (JFK) → Dubai (return).</b> Pray daytime prayers in NYC; in the air pray each fard at its time by the plane's position, shortened. Fajr stays 2 rak'ah.</div></div>
+
+      <div class="pfine">Times are guidance — confirm exact prayer times with an app (e.g. IslamicFinder) each day, and follow a scholar you trust for your situation.</div>
+    </div>
+  </details>
+
   <div class="fcard">
     <h3>Before you go &middot; quick list</h3>
     <div class="sub">What still needs booking or action</div>
-    <div class="todo"><span class="b"></span><span>Shorten <b>Ojai</b> to 3 nights (Aug 3&ndash;6) to clear the Waldorf overlap.</span></div>
-    <div class="todo"><span class="b"></span><span>Finish bookings: Shutters &middot; Inn of the Five Graces &middot; The Charles &middot; internal flights &middot; Acela.</span></div>
-    <div class="todo"><span class="b"></span><span>Reserve long-lead restaurants: Carbone &middot; n/naka &middot; Ten Thousand Waves &middot; Giorgio Baldi.</span></div>
-    <div class="todo"><span class="b"></span><span>Canada visa only if you swap Santa Fe for <b>Vancouver</b>.</span></div>
+    <div class="todo"><span class="b"></span><span>Pick <b>one Beverly Hills hotel</b> for both LA stays (Jul 24&ndash;Aug 1 and Aug 7&ndash;13) so the room &mdash; and your luggage during Vegas &mdash; stays put.</span></div>
+    <div class="todo"><span class="b"></span><span>Book hotels: Beverly Hilton (&times;2) &middot; Ojai Valley Inn &middot; Los Poblanos (Albuquerque) &middot; Inn of the Five Graces &middot; Conrad NY.</span></div>
+    <div class="todo"><span class="b"></span><span>Book flights: Virgin LHR&rarr;LAX &middot; LAX&rarr;ABQ &middot; ABQ&rarr;JFK; plus the Sixt car (return to LAX before the ABQ flight).</span></div>
+    <div class="todo"><span class="b"></span><span>Reserve long-lead restaurants: n/naka &middot; Funke &middot; Ten Thousand Waves &middot; Carbone.</span></div>
+    <div class="todo"><span class="b"></span><span><b>Boston is set aside</b> &mdash; decide in the US whether to add it (Santa Fe &rarr; Boston &rarr; NYC).</span></div>
     <div class="todo"><span class="b"></span><span>Daily prayer times &amp; Qasr/Jam&rsquo; rulings are in the separate PDF.</span></div>
   </div>
 
@@ -212,15 +261,13 @@ const PH = {
   london:"https://images.unsplash.com/photo-1513635269975-59663e0ac1ad",
   la:"https://images.unsplash.com/photo-1744696008558-f91934254fe4",
   vegas:"https://images.unsplash.com/photo-1758205482205-b465a5c5df29",
-  bh:"https://images.unsplash.com/photo-1733756798962-e481f003e9d7",
-  sm:"https://images.unsplash.com/photo-1459258350879-34886319a3c9",
-  cam:"https://images.unsplash.com/photo-1565127803082-69dd82351360",
+  la2:"https://images.unsplash.com/photo-1744696008558-f91934254fe4",
   ny:"https://images.unsplash.com/photo-1613968317130-e6565f71b9d3"
 };
 const GR = {
   london:["#3E5277","#C98F4F"], la:["#4FA3D1","#F6C26B"], vegas:["#241A44","#7A2E6E"],
-  ojai:["#6E5E92","#EBAAB1"], bh:["#5AA9D6","#F3D08A"], sm:["#3C97A8","#CFE8E2"],
-  sf:["#B5573D","#E8A33D"], cam:["#5E7FA3","#CBD8C5"], ny:["#2E3F63","#D98B3A"]
+  ojai:["#6E5E92","#EBAAB1"], la2:["#4FA3D1","#F6C26B"], abq:["#8E5A6E","#E0A06A"],
+  sf:["#B5573D","#E8A33D"], ny:["#2E3F63","#D98B3A"]
 };
 const B = {
 london:`<svg class="bsvg" viewBox="0 0 320 100" preserveAspectRatio="none"><defs><linearGradient id="g_london" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3E5277"/><stop offset="1" stop-color="#C98F4F"/></linearGradient></defs><rect width="320" height="100" fill="url(#g_london)"/><circle cx="262" cy="32" r="13" fill="#F4D9A0" opacity=".85"/><g fill="#1B2230"><rect x="70" y="60" width="30" height="40"/><rect x="105" y="52" width="24" height="48"/><rect x="135" y="64" width="34" height="36"/><rect x="200" y="58" width="26" height="42"/><rect x="230" y="66" width="30" height="34"/><rect x="285" y="60" width="35" height="40"/><rect x="40" y="34" width="16" height="66"/><polygon points="40,34 48,20 56,34"/></g><circle cx="48" cy="46" r="4" fill="#E8C887"/></svg>`,
@@ -235,95 +282,85 @@ ny:`<svg class="bsvg" viewBox="0 0 320 100" preserveAspectRatio="none"><defs><li
 };
 
 const stops = [
-  { key:"london", n:"1", city:"London", cityShort:"London", place:"NoMad London", tag:"Graduation \u00b7 city",
-    dates:"Jul 19 \u2013 24", nights:"5 nights", temp:"23\u00b0/14\u00b0C", status:"stay",
+  { key:"london", n:"1", city:"London", cityShort:"London", place:"NoMad London", tag:"Graduation · city",
+    dates:"Jul 19 – 24", nights:"5 nights", temp:"23°/14°C", status:"stay",
     start:"2026-07-19", end:"2026-07-24",
-    via:{m:"fly", t:"Emirates from Riyadh \u00b7 via Dubai"},
-    hl:["Graduation on Jul 22 \u2014 Grand Connaught Rooms, Covent Garden (a 5-minute walk).",
-        "Markets and culture: Borough Market and the V&amp;A.",
+    via:{m:"fly", t:"Emirates from Riyadh · via Dubai"},
+    hl:["Graduation on Jul 22 — Grand Connaught Rooms, Covent Garden (a 5-minute walk).",
+        "Markets and culture: Borough Market and the V&A.",
         "A Michelin dinner and a West End show."],
-    weather:"Typical 23\u00b0/14\u00b0C (73\u00b0/57\u00b0F). Mild and changeable \u2014 carry a light layer and a compact umbrella. Very long daylight.",
-    pray:"Resident \u2014 pray each prayer in full. No shortening or combining." },
+    weather:"Typical 23°/14°C (73°/57°F). Mild and changeable — carry a light layer and a compact umbrella. Very long daylight.",
+    pray:"Resident — pray each prayer in full. No shortening or combining." },
 
-  { key:"la", n:"2", city:"Los Angeles", cityShort:"Los Angeles", place:"The Beverly Hilton", tag:"City \u00b7 coast",
-    dates:"Jul 24 \u2013 Aug 3", nights:"10 nights", temp:"28\u00b0/19\u00b0C", status:"stay",
-    start:"2026-07-24", end:"2026-08-03",
-    via:{m:"fly", t:"Virgin Atlantic \u00b7 LHR\u2192LAX \u00b7 ~11h"},
+  { key:"la", n:"2", city:"Los Angeles", cityShort:"Los Angeles", place:"The Beverly Hilton", tag:"City · home base",
+    dates:"Jul 24 – Aug 1", nights:"8 nights", temp:"28°/19°C", status:"stay",
+    start:"2026-07-24", end:"2026-08-01",
+    via:{m:"fly", t:"Virgin Atlantic · LHR→LAX · ~11h"},
     hl:["Rodeo Drive and the Getty Center.",
         "Malibu and the Pacific Coast Highway; lunch at Nobu Malibu.",
         "Griffith Observatory; dinner at Spago or Funke."],
-    weather:"Typical 28\u00b0/19\u00b0C (82\u00b0/66\u00b0F). Sunny and dry; a morning marine layer usually burns off by midday.",
-    pray:"Resident \u2014 pray each prayer in full." },
+    weather:"Typical 28°/19°C (82°/66°F). Sunny and dry; a morning marine layer usually burns off by midday.",
+    pray:"Resident — pray each prayer in full." },
 
   { key:"vegas", n:"+", sub:true, city:"Las Vegas", cityShort:"Las Vegas", place:"Wynn", tag:"Side trip by car",
-    dates:"Jul 30 \u2013 Aug 1", nights:"2 nights", temp:"40\u00b0/27\u00b0C", status:"move",
-    start:"2026-07-30", end:"2026-08-01",
-    via:{m:"car", t:"Drive from LA \u00b7 ~4h"},
+    dates:"Aug 1 – 3", nights:"2 nights", temp:"40°/27°C", status:"move",
+    start:"2026-08-01", end:"2026-08-03",
+    via:{m:"car", t:"Drive from LA · ~4h"},
     hl:["Wynn pool and the Strip.",
-        "Cirque du Soleil \u2018O\u2019.",
-        "Dinner at Jo\u00ebl Robuchon."],
-    weather:"Typical 40\u00b0/27\u00b0C (104\u00b0/81\u00b0F). Desert heat \u2014 pool mornings, indoor afternoons, hydrate well.",
-    pray:"Traveler \u2014 you may shorten 4-rak\u2019ah prayers to 2 (Qasr) and combine Dhuhr+Asr and Maghrib+Isha (Jam\u2019)." },
+        "Cirque du Soleil 'O'.",
+        "Dinner at Joël Robuchon."],
+    weather:"Typical 40°/27°C (104°/81°F). Desert heat — pool mornings, indoor afternoons, hydrate well.",
+    pray:"Traveler — shorten 4-rak'ah prayers to 2 (Qasr) and combine Dhuhr+Asr and Maghrib+Isha (Jam'). Leave your big bags at the LA hotel." },
 
-  { key:"ojai", n:"3", city:"Ojai", cityShort:"Ojai", place:"Ojai Valley Inn", tag:"Slow down \u00b7 valley",
-    dates:"Aug 3 \u2013 6", nights:"3 nights", temp:"33\u00b0/15\u00b0C", status:"move",
-    start:"2026-08-03", end:"2026-08-06",
-    via:{m:"car", t:"Drive \u00b7 ~1.5h (via LA)"},
-    hl:["Spa and the famous \u2018pink moment\u2019 sunset on the mountains.",
-        "Bart\u2019s Books, the legendary open-air bookstore.",
+  { key:"ojai", n:"3", city:"Ojai", cityShort:"Ojai", place:"Ojai Valley Inn", tag:"Slow down · valley",
+    dates:"Aug 3 – 7", nights:"4 nights", temp:"33°/15°C", status:"move",
+    start:"2026-08-03", end:"2026-08-07",
+    via:{m:"car", t:"Drive from Las Vegas · ~5.5h (via LA)"},
+    hl:["Spa and the famous 'pink moment' sunset on the mountains.",
+        "Bart's Books, the legendary open-air bookstore.",
         "Olive-oil and wine tasting; optional hot-air balloon."],
-    weather:"Typical 33\u00b0/15\u00b0C (91\u00b0/59\u00b0F). Hot, dry afternoons; pleasantly cool valley evenings.",
-    pray:"Traveler \u2014 you may shorten (Qasr) and combine (Jam\u2019)." },
+    weather:"Typical 33°/15°C (91°/59°F). Hot, dry afternoons; pleasantly cool valley evenings.",
+    pray:"Traveler — you may shorten (Qasr) and combine (Jam')." },
 
-  { key:"bh", n:"4", city:"Beverly Hills", cityShort:"Beverly Hills", place:"Waldorf Astoria", tag:"Refined wind-down",
-    dates:"Aug 6 \u2013 9", nights:"3 nights", temp:"29\u00b0/19\u00b0C", status:"stay",
-    start:"2026-08-06", end:"2026-08-09",
-    via:{m:"car", t:"Drive \u00b7 ~1.5h"},
-    hl:["Rooftop pool with skyline views.",
-        "Greystone Gardens and the Huntington in Pasadena.",
-        "Dinner at Jean-Georges."],
-    weather:"Typical 29\u00b0/19\u00b0C (84\u00b0/66\u00b0F). Warm and sunny.",
-    pray:"Resident \u2014 pray in full (counts as one stay with Santa Monica, 6 nights in greater LA)." },
+  { key:"la2", n:"4", city:"Los Angeles", cityShort:"Beverly Hills", place:"The Beverly Hilton — same hotel", tag:"Rest · wind-down",
+    dates:"Aug 7 – 13", nights:"6 nights", temp:"29°/19°C", status:"stay",
+    start:"2026-08-07", end:"2026-08-13",
+    via:{m:"car", t:"Drive from Ojai · ~1.5h"},
+    hl:["Unwind before the desert leg — spa, pool, familiar comforts.",
+        "Easy Santa Monica beach days by car, no hotel change.",
+        "Nothing rushed: a calm buffer before the flight out."],
+    weather:"Typical 29°/19°C (84°/66°F). Warm and sunny.",
+    pray:"Resident — pray each prayer in full." },
 
-  { key:"sm", n:"5", city:"Santa Monica", cityShort:"Santa Monica", place:"Shutters on the Beach", tag:"Beach",
-    dates:"Aug 9 \u2013 12", nights:"3 nights", temp:"24\u00b0/18\u00b0C", status:"stay",
-    start:"2026-08-09", end:"2026-08-12",
-    via:{m:"car", t:"Drive \u00b7 ~30 min"},
-    hl:["Private beach and a bike ride along the coast path.",
-        "Venice and Abbot Kinney.",
-        "Dinner at Giorgio Baldi."],
-    weather:"Typical 24\u00b0/18\u00b0C (75\u00b0/64\u00b0F). Mild coastal air, ocean breeze, occasional morning fog.",
-    pray:"Resident \u2014 pray in full." },
+  { key:"abq", n:"5", city:"Albuquerque", cityShort:"Albuquerque", place:"Los Poblanos Historic Inn", tag:"Southwest · stopover",
+    dates:"Aug 13 – 15", nights:"2 nights", temp:"32°/18°C", status:"move",
+    start:"2026-08-13", end:"2026-08-15",
+    via:{m:"fly", t:"Fly LAX→ABQ · ~1h45"},
+    hl:["Old Town adobe and the lavender fields at Los Poblanos.",
+        "Sandia Peak tramway for sunset over the high desert.",
+        "An easy 1-hour drive sets up Santa Fe next."],
+    weather:"Typical 32°/18°C (90°/64°F). Sunny high-desert days, brief afternoon monsoon storms, cool nights.",
+    pray:"Traveler — you may shorten (Qasr) and combine (Jam')." },
 
-  { key:"sf", n:"6", city:"Santa Fe", cityShort:"Santa Fe", place:"Inn of the Five Graces", tag:"Art \u00b7 high desert",
-    dates:"Aug 12 \u2013 15", nights:"3 nights", temp:"28\u00b0/13\u00b0C", status:"move",
-    start:"2026-08-12", end:"2026-08-15",
-    via:{m:"fly", t:"Fly LAX\u2192ABQ ~1h45 + drive 1h"},
-    hl:["Canyon Road galleries and the Georgia O\u2019Keeffe Museum.",
-        "Ten Thousand Waves \u2014 a Japanese spa in the hills.",
-        "Meow Wolf\u2019s immersive art experience."],
-    weather:"Typical 28\u00b0/13\u00b0C (82\u00b0/55\u00b0F). Sunny high-desert days with brief afternoon monsoon storms; cool nights at 7,200 ft.",
-    pray:"Traveler \u2014 you may shorten (Qasr) and combine (Jam\u2019)." },
-
-  { key:"cam", n:"7", city:"Cambridge &amp; Boston", cityShort:"Cambridge & Boston", place:"The Charles Hotel", tag:"Nostalgia \u00b7 university",
-    dates:"Aug 15 \u2013 19", nights:"4 nights", temp:"28\u00b0/18\u00b0C", status:"move", borderline:true,
+  { key:"sf", n:"6", city:"Santa Fe", cityShort:"Santa Fe", place:"Inn of the Five Graces", tag:"Art · high desert",
+    dates:"Aug 15 – 19", nights:"4 nights", temp:"28°/13°C", status:"move",
     start:"2026-08-15", end:"2026-08-19",
-    via:{m:"fly", t:"Fly ABQ\u2192Boston \u00b7 1 stop"},
-    hl:["Harvard Yard and revisiting where you studied.",
-        "The North End and a seafood dinner at Neptune Oyster.",
-        "Isabella Stewart Gardner Museum."],
-    weather:"Typical 28\u00b0/18\u00b0C (82\u00b0/64\u00b0F). Warm and a little humid; the odd afternoon thunderstorm.",
-    pray:"Borderline (4 nights). Shortening and combining are allowed on the majority view; praying in full is fine if you prefer caution." },
+    via:{m:"car", t:"Drive ABQ→Santa Fe · ~1h"},
+    hl:["Canyon Road galleries and the Georgia O'Keeffe Museum.",
+        "Ten Thousand Waves — a Japanese spa in the hills.",
+        "Meow Wolf's immersive art experience."],
+    weather:"Typical 28°/13°C (82°/55°F). Sunny high-desert days with brief afternoon monsoon storms; cool nights at 7,200 ft.",
+    pray:"Traveler — you may shorten (Qasr) and combine (Jam')." },
 
-  { key:"ny", n:"8", city:"New York", cityShort:"New York", place:"Conrad NY Downtown", tag:"Finale \u00b7 city",
-    dates:"Aug 19 \u2013 25", nights:"6 nights", temp:"28\u00b0/20\u00b0C", status:"stay",
-    start:"2026-08-19", end:"2026-08-25",
-    via:{m:"train", t:"Acela \u00b7 Boston\u2192NYC \u00b7 ~3h45"},
+  { key:"ny", n:"7", city:"New York", cityShort:"New York", place:"Conrad NY Downtown", tag:"Finale · city",
+    dates:"Aug 19 – 24", nights:"5 nights", temp:"28°/20°C", status:"stay",
+    start:"2026-08-19", end:"2026-08-24",
+    via:{m:"fly", t:"Fly ABQ→JFK · ~4h (1h drive from Santa Fe)"},
     hl:["The Met and Central Park.",
         "A Broadway show.",
         "SoHo shopping and the Brooklyn Bridge."],
-    weather:"Typical 28\u00b0/20\u00b0C (82\u00b0/68\u00b0F). Warm, humid late-summer city weather; occasional storms.",
-    pray:"Resident \u2014 pray in full." },
+    weather:"Typical 28°/20°C (82°/68°F). Warm, humid late-summer city weather; occasional storms.",
+    pray:"Resident — pray each prayer in full." },
 ];
 
 function legHTML(via){
